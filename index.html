@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover beautiful destinations, plan trips and explore travel packages with Travel Bud.">
+    <title>Travel Bud | Your Next Adventure Starts Here</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="#" class="brand" aria-label="Travel Bud home">
+            <span class="brand-icon">✦</span>
+            <span>Travel<span class="brand-accent">Bud</span></span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#" class="active">Home</a>
+            <a href="#explore">Explore</a>
+            <a href="#planner">Plan a Trip</a>
+            <a href="#deals">Deals</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-button" id="wishlistNav" aria-label="View wishlist">
+                ♡ <span class="wishlist-count" id="wishlistCount">0</span>
+            </button>
+            <a href="#planner" class="profile-button">My Trips ↗</a>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow"><span class="live-dot"></span> YOUR NEXT CHAPTER AWAITS</span>
+
+                <h1>Somewhere new.<br>Something <span>beautiful.</span></h1>
+
+                <p>Find places that move you, little adventures that stay with you, and trips worth remembering.</p>
+
+                <div class="hero-actions">
+                    <a href="#explore" class="btn btn-primary">Explore destinations <span>↗</span></a>
+                    <a href="#planner" class="btn btn-light">Plan my trip</a>
+                </div>
+
+                <div class="hero-note">
+                    <span class="avatar-stack">✈</span>
+                    <span>Big dreams, little plans, unforgettable journeys.</span>
+                </div>
+            </div>
+
+            <div class="hero-badge">
+                <span>✦</span>
+                <div><strong>Made for you</strong><small>Your kind of adventure</small></div>
+            </div>
+        </section>
+
+        <!-- Search -->
+        <section class="search-wrap" aria-label="Search destinations">
+            <form class="search-panel" id="searchForm">
+                <label class="search-field">
+                    <span class="field-icon">⌖</span>
+                    <span class="field-content">
+                        <span class="field-label">WHERE TO?</span>
+                        <input type="search" id="destinationSearch" placeholder="Mountains, beaches, cities..." aria-label="Search destination">
+                    </span>
+                </label>
+
+                <div class="search-divider"></div>
+
+                <label class="search-field budget-field">
+                    <span class="field-icon">₹</span>
+                    <span class="field-content">
+                        <span class="field-label">YOUR BUDGET</span>
+                        <select id="budgetFilter" aria-label="Maximum budget">
+                            <option value="all">Any budget</option>
+                            <option value="5000">Under ₹5,000</option>
+                            <option value="10000">Under ₹10,000</option>
+                            <option value="20000">Under ₹20,000</option>
+                            <option value="50000">Under ₹50,000</option>
+                        </select>
+                    </span>
+                </label>
+
+                <button class="btn btn-primary search-button" type="submit">Find my trip <span>→</span></button>
+                <button id="clearFiltersBtn" class="clear-filters-btn" type="button">
+                    Clear filters
+                </button>
+            </form>
+        </section>
+
+        <!-- Categories -->
+        <section class="section category-section" id="explore">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">FIND YOUR KIND OF HAPPY</span>
+                    <h2>What's your <span>travel mood?</span></h2>
+                    <p>Every traveller has a story. Find the trip that feels like yours.</p>
+                </div>
+                <a href="#destinations" class="text-link">Explore all destinations ↗</a>
+            </div>
+
+            <div class="category-grid">
+                <button class="category-card" data-category="nature">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80" alt="Beautiful mountain peaks" loading="lazy">
+                    <span class="category-decoration leaf">❧</span>
+                    <span class="category-info"><strong>Nature & Hills</strong><small>Find your quiet</small></span>
+                    <span class="circle-arrow">↗</span>
+                </button>
+
+                <button class="category-card" data-category="beaches">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80" alt="Turquoise sea and sandy beach" loading="lazy">
+                    <span class="category-decoration shell">✧</span>
+                    <span class="category-info"><strong>Beaches</strong><small>Chase the waves</small></span>
+                    <span class="circle-arrow">↗</span>
+                </button>
+
+                <button class="category-card" data-category="adventure">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=700&q=80" alt="Hikers exploring a mountain trail" loading="lazy">
+                    <span class="category-decoration compass">⊹</span>
+                    <span class="category-info"><strong>Adventure</strong><small>Take the wild road</small></span>
+                    <span class="circle-arrow">↗</span>
+                </button>
+
+                <button class="category-card" data-category="culture">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Warm and inviting dining experience" loading="lazy">
+                    <span class="category-decoration noodle">〰</span>
+                    <span class="category-info"><strong>Food & Culture</strong><small>Taste the world</small></span>
+                    <span class="circle-arrow">↗</span>
+                </button>
+
+                <button class="category-card" data-category="heritage">
+                    <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=700&q=80" alt="Beautiful city architecture" loading="lazy">
+                    <span class="category-decoration stamp">✳</span>
+                    <span class="category-info"><strong>Cities & Heritage</strong><small>Stories in every street</small></span>
+                    <span class="circle-arrow">↗</span>
+                </button>
+
+                <button class="category-card" data-category="luxury">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=700&q=80" alt="Luxury resort swimming pool" loading="lazy">
+                    <span class="category-decoration sparkle">✧</span>
+                    <span class="category-info"><strong>Luxury Stays</strong><small>A little extra magic</small></span>
+                    <span class="circle-arrow">↗</span>
+                </button>
+
+                <button class="category-card" data-category="family">
+                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=700&q=80" alt="Peaceful lake surrounded by mountains" loading="lazy">
+                    <span class="category-decoration sun">☼</span>
+                    <span class="category-info"><strong>Family Trips</strong><small>Make memories together</small></span>
+                    <span class="circle-arrow">↗</span>
+                </button>
+
+                <button class="category-card" data-category="solo">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=700&q=80" alt="Open road through a scenic landscape" loading="lazy">
+                    <span class="category-decoration plane">⌁</span>
+                    <span class="category-info"><strong>Solo Travel</strong><small>Go your own way</small></span>
+                    <span class="circle-arrow">↗</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Destinations -->
+        <section class="section destinations-section" id="destinations">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">A LITTLE TRAVEL INSPIRATION</span>
+                    <h2>Places to <span>fall for.</span></h2>
+                    <p>Handpicked destinations for your next lovely escape.</p>
+                </div>
+                <label class="sort-control">
+                    <span>Sort by</span>
+                    <select id="sortFilter" aria-label="Sort destinations">
+                        <option value="popular">Popular</option>
+                        <option value="price-low">Price: low to high</option>
+                        <option value="price-high">Price: high to low</option>
+                        <option value="name">Name</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="active-filters" id="activeFilters"></div>
+            <div class="destination-grid" id="destinationGrid" aria-live="polite"></div>
+            <p class="empty-state" id="emptyState" hidden>No matching trips found. Try a different search.</p>
+        </section>
+
+        <!-- Deals -->
+        <section class="deals-section section" id="deals">
+            <div class="deal-copy">
+                <span class="eyebrow">GOOD PLANS, GENTLER PRICES</span>
+                <h2>Your next adventure<br>doesn't have to <span>cost the earth.</span></h2>
+                <p>Discover sample trip ideas for different budgets. Your dream destination might be closer than you think.</p>
+                <a href="#destinations" class="btn btn-primary">Find your escape ↗</a>
+                <small class="demo-note">Sample prices for demonstration only. Not live offers.</small>
+            </div>
+            <div class="deal-image">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1100&q=85" alt="A beautiful lake and mountain escape" loading="lazy">
+                <div class="deal-sticker"><span>YOUR</span><strong>Next<br>Escape</strong><span>AWAITS ✦</span></div>
+            </div>
+        </section>
+
+        <!-- Planner -->
+        <section class="planner-section section" id="planner">
+            <div class="planner-copy">
+                <span class="eyebrow">A PLAN THAT FITS YOU</span>
+                <h2>Dream it.<br><span>Plan it.</span> Go.</h2>
+                <p>Start with a budget and a destination. We'll help you organise your travel ideas.</p>
+            </div>
+
+            <form class="planner-card" id="budgetForm">
+                <h3>Let's plan your escape</h3>
+                <p class="muted">A simple trip budget estimator</p>
+
+                <label for="tripName">Destination</label>
+                <input id="tripName" type="text" placeholder="e.g. Goa" required>
+
+                <div class="form-row">
+                    <div>
+                        <label for="travellers">Travellers</label>
+                        <input id="travellers" type="number" min="1" max="50" value="2" required>
+                    </div>
+                    <div>
+                        <label for="tripBudget">Your budget (₹)</label>
+                        <input id="tripBudget" type="number" min="0" value="20000" required>
+                    </div>
+                </div>
+
+                <div class="budget-breakdown">
+                    <div><span>Transport</span><input type="number" id="transportCost" min="0" value="4000" aria-label="Estimated transport cost in rupees"></div>
+                    <div><span>Stay</span><input type="number" id="stayCost" min="0" value="6000" aria-label="Estimated accommodation cost in rupees"></div>
+                    <div><span>Food</span><input type="number" id="foodCost" min="0" value="3000" aria-label="Estimated food cost in rupees"></div>
+                    <div><span>Activities & other</span><input type="number" id="activityCost" min="0" value="2000" aria-label="Estimated activities and other costs in rupees"></div>
+                </div>
+
+                <div class="budget-result" aria-live="polite">
+                    <span>Estimated total</span>
+                    <strong id="totalCost">₹15,000</strong>
+                    <small id="budgetMessage">₹5,000 remaining in your budget</small>
+                    <span class="per-person" id="perPersonCost">₹7,500 per person</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary full-width">Save trip idea ↗</button>
+                <p class="demo-note">Estimates only. No booking or payment is made.</p>
+            </form>
+        </section>
+
+<!-- My Trips -->
+<section class="section" id="myTrips">
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">YOUR SAVED ADVENTURES</span>
+            <h2>My <span>Trips.</span></h2>
+            <p>Your saved travel ideas, all in one place.</p>
+        </div>
+    </div>
+
+    <div id="savedTripsList">
+        <p>You haven't saved any trips yet. Plan an escape above!</p>
+    </div>
+</section>
+
+        <!-- Travel inspiration -->
+        <section class="quote-section">
+            <span class="quote-mark">“</span>
+            <p>The best journeys don't just take you places.<br>They bring you a little closer to yourself.</p>
+            <span class="quote-caption">YOUR TRAVEL STORY STARTS HERE</span>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="#" class="brand"><span class="brand-icon">✦</span><span>Travel<span class="brand-accent">Bud</span></span></a>
+                <p>Your next adventure starts here.<br>Find your place in the world.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Discover</h4>
+                <a href="#explore">Travel categories</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#deals">Special offers</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Plan</h4>
+                <a href="#planner">Budget calculator</a>
+                <a href="#planner">Trip planner</a>
+                <a href="#planner">My trips</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Travel Bud</h4>
+                <a href="#footer-about">About us</a>
+                <a href="#footer-contact">Contact</a>
+                <a href="#footer-faq">FAQs</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Travel Bud · A travel planning demo</span>
+            <span>Made for the love of exploring <span class="brand-accent">♥</span></span>
+        </div>
+    </footer>
+
+    <!-- Mobile bottom navigation -->
+    <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <a href="#" class="mobile-nav-item selected"><span>⌂</span>Home</a>
+        <a href="#destinations" class="mobile-nav-item"><span>⌕</span>Explore</a>
+        <button type="button" class="mobile-nav-item" id="mobileWishlist"><span>♡</span>Wishlist</button>
+        <a href="#planner" class="mobile-nav-item"><span>▤</span>My Trips</a>
+    </nav>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
